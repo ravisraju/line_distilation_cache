@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for benchmark in "lucas" "mcf" "mesa" "mgrid"
+do
+	echo -------- Running "$benchmark" ----------
+	cd "$benchmark"/
+	chmod 755 RUN"$benchmark"
+	./RUN"$benchmark" ../../simplesim-3.0/sim-outorder ../../spec2000binaries/"$benchmark"00.peak.ev6 -max:inst 200000000 -fastfwd 20000000 -redir:sim "$benchmark"_ldis_mt_output.txt -bpred 2lev -bpred:2lev 1 256 4 0 -bpred:ras 8 -bpred:btb 64 2 -cache:il1 il1:64:64:2:l -cache:dl1 dl1:64:64:2:l -l2_distillcache true -l2_distill_threshold true -cache:il2 dl2 -cache:dl2 ul2:1024:64:8:l
+	./RUN"$benchmark" ../../simplesim-3.0/sim-outorder ../../spec2000binaries/"$benchmark"00.peak.ev6 -max:inst 200000000 -fastfwd 20000000 -redir:sim "$benchmark"_ldis_output.txt -bpred 2lev -bpred:2lev 1 256 4 0 -bpred:ras 8 -bpred:btb 64 2 -cache:il1 il1:64:64:2:l -cache:dl1 dl1:64:64:2:l -l2_distillcache true -l2_distill_threshold false -cache:il2 dl2 -cache:dl2 ul2:1024:64:8:l
+	./RUN"$benchmark" ../../simplesim-3.0/sim-outorder ../../spec2000binaries/"$benchmark"00.peak.ev6 -max:inst 200000000 -fastfwd 20000000 -redir:sim "$benchmark"_base_512k_output.txt -bpred 2lev -bpred:2lev 1 256 4 0 -bpred:ras 8 -bpred:btb 64 2 -cache:il1 il1:64:64:2:l -cache:dl1 dl1:64:64:2:l -l2_distillcache false -l2_distill_threshold false -cache:il2 dl2 -cache:dl2 ul2:1024:64:8:l
+	./RUN"$benchmark" ../../simplesim-3.0/sim-outorder ../../spec2000binaries/"$benchmark"00.peak.ev6 -max:inst 200000000 -fastfwd 20000000 -redir:sim "$benchmark"_base_1mb_output.txt -bpred 2lev -bpred:2lev 1 256 4 0 -bpred:ras 8 -bpred:btb 64 2 -cache:il1 il1:64:64:2:l -cache:dl1 dl1:64:64:2:l -l2_distillcache false -l2_distill_threshold false -cache:il2 dl2 -cache:dl2 ul2:2048:64:8:l
+	cd ../
+done
+
+

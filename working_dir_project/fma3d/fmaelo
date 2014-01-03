@@ -1,0 +1,35 @@
+
+
+            _/_/_/_/_/_/  _/_/          _/_/       _/_/_/                   _/_/_/_/      _/_/_/_/_/_/ 
+           _/_/_/_/_/_/  _/_/_/      _/_/_/    _/_/_/_/_/_/             _/_/_/_/_/_/_/   _/_/_/_/_/_/-/
+          _/_/          _/_/_/_/  _/_/_/_/   _/_/      _/_/            _/_/       _/_/  _/_/       _/_/
+         _/_/          _/_/ _/_/_/_/ _/_/  _/_/        _/_/                      _/_/  _/_/        _/_/
+        _/_/_/_/_/    _/_/  _/_/_/  _/_/  _/_/        _/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/ 
+       _/_/_/_/_/    _/_/   _/_/   _/_/  _/_/_/_/_/_/_/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/  
+      _/_/          _/_/          _/_/  _/_/_/_/_/_/_/_/                      _/_/  _/_/        _/_/   
+     _/_/          _/_/          _/_/  _/_/        _/_/           _/_/       _/_/  _/_/       _/_/     
+    _/_/          _/_/          _/_/  _/_/        _/_/           _/_/_/_/_/_/_/   _/_/_/_/_/_/_/       
+   _/_/          _/_/          _/_/  _/_/        _/_/              _/_/_/_/      _/_/_/_/_/_/          
+
+     Version: SPEC CPU
+     Released: 
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: INCLUDE_FILE
+ *** INFORMATION *** Number Of Items Allocated:      100
+
+ *** INFORMATION *** REPORT_ALLOCATION_EVENT.001.00
+ *** INFORMATION *** ALLOCATE Function Succeeded For Derived Type: VALUE
+ *** INFORMATION *** Number Of Items Allocated:        2
+  
+  Entered INIT_INCLUDE_FILE.
+  
+  
+  Entered SCAN_INCLUDED_FILES.
+  
+
+ *** INFORMATION *** SCAN_INCLUDED_FILES.001.02
+ *** INFORMATION *** INCLUDE File Scanned: /home/vamsi/Documents/CSCE614/Assignment2/working_dir_project/fma3d/fma3d.in
+  
+  Entered SCAN_INPUT_RECORDS.
+  

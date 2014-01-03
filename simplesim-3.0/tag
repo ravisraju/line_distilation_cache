@@ -1,0 +1,61 @@
+cache.c:	*((byte_t *)p) = CACHE_BYTE(&blk->data[0], bofs); break;	\
+cache.c:	*((half_t *)p) = CACHE_HALF(&blk->data[0], bofs); break;	\
+cache.c:	*((word_t *)p) = CACHE_WORD(&blk->data[0], bofs); break;	\
+cache.c:	      *((word_t *)p) = CACHE_WORD(&blk->data[0], bofs);	\
+cache.c:	CACHE_BYTE(&blk->data[0], bofs) = *((byte_t *)p); break;	\
+cache.c:        CACHE_HALF(&blk->data[0], bofs) = *((half_t *)p); break;	\
+cache.c:	CACHE_WORD(&blk->data[0], bofs) = *((word_t *)p); break;	\
+cache.c:	      CACHE_WORD(&blk->data[0], bofs) = *((word_t *)p);		\
+cache.c:  int index = CACHE_HASH(cp, blk->tag);
+cache.c:  int index = CACHE_HASH(cp, blk->tag);
+cache.c:  blk->hash_next = set->hash[index];
+cache.c:  if (!blk->way_prev && !blk->way_next)
+cache.c:  else if (!blk->way_prev)
+cache.c:      set->way_head = blk->way_next;
+cache.c:      blk->way_next->way_prev = NULL;
+cache.c:  else if (!blk->way_next)
+cache.c:      set->way_tail = blk->way_prev;
+cache.c:      blk->way_prev->way_next = NULL;
+cache.c:      blk->way_prev->way_next = blk->way_next;
+cache.c:      blk->way_next->way_prev = blk->way_prev;
+cache.c:      blk->way_next = set->way_head;
+cache.c:      blk->way_prev = NULL;
+cache.c:      blk->way_prev = set->way_tail;
+cache.c:      blk->way_next = NULL;
+cache.c:	  blk->status = 0;
+cache.c:	  blk->tag = 0;
+cache.c:	  blk->ready = 0;
+cache.c:	  blk->user_data = (usize != 0
+cache.c:	  blk->way_next = cp->sets[i].way_head;
+cache.c:	  blk->way_prev = NULL;
+cache.c:	   blk=blk->hash_next)
+cache.c:	  if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:	   blk=blk->way_next)
+cache.c:	  if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:    blk->status |= CACHE_BLK_DIRTY;
+cache.c:  if (blk->way_prev && cp->policy == LRU)
+cache.c:    *udata = blk->user_data;
+cache.c:  return (int) MAX(cp->hit_latency, (blk->ready - now));
+cache.c:    blk->status |= CACHE_BLK_DIRTY;
+cache.c:    *udata = blk->user_data;
+cache.c:  return (int) MAX(cp->hit_latency, (blk->ready - now));
+cache.c:	 blk=blk->hash_next)
+cache.c:      if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:	 blk=blk->way_next)
+cache.c:      if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:      for (blk=cp->sets[i].way_head; blk; blk=blk->way_next)
+cache.c:	  if (blk->status & CACHE_BLK_VALID)
+cache.c:	      blk->status &= ~CACHE_BLK_VALID;
+cache.c:	      if (blk->status & CACHE_BLK_DIRTY)
+cache.c:					   CACHE_MK_BADDR(cp, blk->tag, i),
+cache.c:	   blk=blk->hash_next)
+cache.c:	  if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:	   blk=blk->way_next)
+cache.c:	  if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+cache.c:      blk->status &= ~CACHE_BLK_VALID;
+cache.c:      if (blk->status & CACHE_BLK_DIRTY)
+cache.c:				   CACHE_MK_BADDR(cp, blk->tag, set),
+sim-cache.c:  md_addr_t *phy_page_ptr = (md_addr_t *)blk->user_data;
+sim-cache.c:  md_addr_t *phy_page_ptr = (md_addr_t *)blk->user_data;
+sim-outorder.c:  md_addr_t *phy_page_ptr = (md_addr_t *)blk->user_data;
+sim-outorder.c:  md_addr_t *phy_page_ptr = (md_addr_t *)blk->user_data;
